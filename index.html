@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table Matrix</title>
+    <script src="https://kit.fontawesome.com/6fef5ae642.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div id="navigation"></div>
+    </header>
+
+    <main>
+
+        <div class="container">
+            <!-- add task -->
+            <div id="add-task-container">
+                <input id="new-task" type="text" name="task" placeholder="Task Title" required />
+                <select id="urgent-task" name="urgentTask">
+                    <option value="true">Urgent</option>
+                    <option value="false">Not Urgent</option>
+                </select>
+                <select id="imp-task" name="impTask">
+                    <option value="true">Important</option>
+                    <option value="false">Not Important</option>
+                </select>
+                <button onclick="addNewTask()">Add</button>
+            </div>
+
+
+            <!-- Eisenhower's Matrix -->
+            <div id="eisenhower-matrix">
+                <div class="head" id="blank">
+                    <h1> Eisenhower's Matrix</h1>
+                </div>
+                <div class="head" id="urgent">
+                    <h2>Urgent</h2>
+                </div>
+                <div class="head" id="notUrgent">
+                    <h2>Not Urgent</h2>
+                </div>
+                <div class="head" id="important">
+                    <h2>Important</h2>
+                </div>
+                <div class="head" id="notImportant">
+                    <h2>Not Important</h2>
+                </div>
+
+                <div class="quadrant" id="important-urgent">
+                    <h4>DO</h4>
+                    Do it now.
+                    <ul class="task-list" id="task-list-important-urgent">
+                        <!-- Tasks dynamically added here -->
+                    </ul>
+                    <form id="add-task-form-important-urgent" class="add-task-form" data-quadrant-id="important-urgent">
+                        <input type="text" placeholder="Add a task" />
+                        <button type="submit">Add</button>
+                    </form>
+                </div>
+                <div class="quadrant" id="important-not-urgent">
+                    <h4>Decide</h4>
+                    Schedule a time to do it.
+                    <ul class="task-list" id="task-list-important-not-urgent">
+                        <!-- Tasks dynamically added here -->
+                    </ul>
+                    <form id="add-task-form-important-not-urgent" class="add-task-form"
+                        data-quadrant-id="important-not-urgent">
+                        <input type="text" placeholder="Add a task" />
+                        <button type="submit">Add</button>
+                    </form>
+                </div>
+
+
+                <div class="quadrant" id="not-important-urgent">
+                    <h4>Delegate</h4>
+                    Who can do it for you?
+                    <ul class="task-list" id="task-list-not-important-urgent">
+                        <!-- Tasks dynamically added here -->
+                    </ul>
+                    <form id="add-task-form-not-important-urgent" class="add-task-form"
+                        data-quadrant-id="not-important-urgent">
+                        <input type="text" placeholder="Add a task" />
+                        <button type="submit">Add</button>
+                    </form>
+                </div>
+                <div class="quadrant" id="not-important-not-urgent">
+                    <h4>Delete</h4>
+                    Eliminate it.
+                    <ul class="task-list" id="task-list-not-important-not-urgent">
+                        <!-- Tasks dynamically added here -->
+                    </ul>
+                    <form id="add-task-form-not-important-not-urgent" class="add-task-form"
+                        data-quadrant-id="not-important-not-urgent">
+                        <input type="text" placeholder="Add a task" />
+                        <button type="submit">Add</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+    <script src="js/nav.js"></script>
+    <script src="js/task.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
