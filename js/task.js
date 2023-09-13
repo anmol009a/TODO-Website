@@ -73,8 +73,8 @@ function removeTask(taskType, taskId) {
     var tasks = getStoredTasks(taskType);
     const task = tasks.find(t => t.id === taskId);
     if (task) {
-        const taskCard = document.getElementById(`task-${taskId}`);
-        taskCard.remove();
+        const taskItem = document.getElementById(`task-${taskId}`);
+        taskItem.remove();
         tasks = tasks.filter(t => t.id !== taskId);
         saveTasks(taskType, tasks);
     }
@@ -97,7 +97,14 @@ function addTask(quadrantId, taskName) {
 
     // save task id counter
     saveTaskIdCounter(taskIdCounter);
+}
 
-    // display tasks
-    renderTasks(quadrantId, "tasks");
+function editTask(e) {
+    var tasks = getStoredTasks('tasks');
+    const task = tasks.find(t => t.id == e.dataset.taskId);
+    if (task) {
+        task.name = prompt("Enter new title", task.name) || task.name;
+        saveTasks('tasks', tasks);
+        renderTasks(task.quadrant, "tasks");
+    }
 }

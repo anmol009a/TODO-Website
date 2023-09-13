@@ -12,27 +12,12 @@
 <body>
 
     <header>
+        <!-- dynamically add navbar -->
         <div id="navigation"></div>
     </header>
 
     <main>
-
         <div class="container">
-            <!-- add task -->
-            <div id="add-task-container">
-                <input id="new-task" type="text" name="task" placeholder="Task Title" required />
-                <select id="urgent-task" name="urgentTask">
-                    <option value="true">Urgent</option>
-                    <option value="false">Not Urgent</option>
-                </select>
-                <select id="imp-task" name="impTask">
-                    <option value="true">Important</option>
-                    <option value="false">Not Important</option>
-                </select>
-                <button onclick="addNewTask()">Add</button>
-            </div>
-
-
             <!-- Eisenhower's Matrix -->
             <div id="eisenhower-matrix">
                 <div class="head" id="blank">
@@ -53,60 +38,57 @@
 
                 <div class="quadrant" id="important-urgent">
                     <h4>DO</h4>
-                    Do it now.
+                    <p>Do it now.</p>
                     <ul class="task-list" id="task-list-important-urgent">
                         <!-- Tasks dynamically added here -->
                     </ul>
-                    <form id="add-task-form-important-urgent" class="add-task-form" data-quadrant-id="important-urgent">
-                        <input type="text" placeholder="Add a task" />
-                        <button type="submit">Add</button>
-                    </form>
+                    <!-- Dynamically add add-task-form -->
                 </div>
                 <div class="quadrant" id="important-not-urgent">
                     <h4>Decide</h4>
-                    Schedule a time to do it.
+                    <p>Schedule a time to do it.</p>
                     <ul class="task-list" id="task-list-important-not-urgent">
                         <!-- Tasks dynamically added here -->
                     </ul>
-                    <form id="add-task-form-important-not-urgent" class="add-task-form"
-                        data-quadrant-id="important-not-urgent">
-                        <input type="text" placeholder="Add a task" />
-                        <button type="submit">Add</button>
-                    </form>
+                    <!-- Dynamically add add-task-form -->
+
                 </div>
 
 
                 <div class="quadrant" id="not-important-urgent">
                     <h4>Delegate</h4>
-                    Who can do it for you?
+                    <p>Who can do it for you?</p>
                     <ul class="task-list" id="task-list-not-important-urgent">
                         <!-- Tasks dynamically added here -->
                     </ul>
-                    <form id="add-task-form-not-important-urgent" class="add-task-form"
-                        data-quadrant-id="not-important-urgent">
-                        <input type="text" placeholder="Add a task" />
-                        <button type="submit">Add</button>
-                    </form>
+                    <!-- Dynamically add add-task-form -->
+                    
                 </div>
                 <div class="quadrant" id="not-important-not-urgent">
                     <h4>Delete</h4>
-                    Eliminate it.
+                    <p>Eliminate it.</p>
                     <ul class="task-list" id="task-list-not-important-not-urgent">
                         <!-- Tasks dynamically added here -->
                     </ul>
-                    <form id="add-task-form-not-important-not-urgent" class="add-task-form"
-                        data-quadrant-id="not-important-not-urgent">
-                        <input type="text" placeholder="Add a task" />
-                        <button type="submit">Add</button>
-                    </form>
+                    <!-- Dynamically add add-task-form -->
+                    
                 </div>
             </div>
         </div>
     </main>
 
+    <!-- dynamically add footer -->
     <div id="footer"></div>
+    
+    <!-- add anvbar -->
     <script src="js/nav.js"></script>
+    <!-- require task functions -->
     <script src="js/task.js"></script>
+    <!-- require task dsoplay functions -->
+    <script src="js/display-task.js"></script>
+    <!-- require task-form functions -->
+    <script src="js/add-task-form.js"></script>
+    <!-- display items: navbar, footer, task, task-form -->
     <script src="js/script.js"></script>
 </body>
 

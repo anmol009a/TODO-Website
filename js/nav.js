@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+function addNav() {
     const navigationContainer = document.getElementById('navigation');
     const footerContainer = document.getElementById('footer');
     const navigationURL = 'navigation.html';
@@ -11,4 +11,4 @@ document.addEventListener('DOMContentLoaded', function () {
     fetch(footerURL)
         .then(response => response.text())
         .then(html => footerContainer.innerHTML = html);
-});
+};

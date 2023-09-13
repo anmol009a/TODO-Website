@@ -1,21 +1,14 @@
 /* Reset default browser styles */
-body,
-h1,
-h2,
-ul,
-li,
-form,
-input,
-button {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-wrap: normal;
 }
 
 /* Set default font family and size */
 body {
     font-family: Arial, sans-serif;
-    font-size: 16px;
 }
 
 /* Style the navigation bar */
@@ -112,7 +105,7 @@ a {
 
 /* add task form */
 .add-task-form {
-    margin-top: 10px;
+    margin-top: 1rem;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -127,7 +120,7 @@ a {
 }
 
 .add-task-form button,
-.task-card button {
+.task-item button {
     padding: 5px 10px;
     background-color: #333;
     color: #fff;
@@ -135,10 +128,15 @@ a {
     cursor: pointer;
 }
 
-.task-card {
-    margin-bottom: 5px;
+.task-item {
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
     display: flex;
     justify-content: space-between;
+}
+
+.task-name{
+    width: 50%;
 }
 
 .task-icon {
@@ -149,7 +147,7 @@ a {
 
 .task-icon i {
     color: green;
-    width: 10px;
+    width: 0.6rem;
 }
 
 
