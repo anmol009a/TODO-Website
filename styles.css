@@ -30,7 +30,7 @@ a {
 }
 
 .container {
-    margin: 2rem;
+    margin: 4rem;
 }
 
 #eisenhower-matrix {
@@ -182,4 +182,11 @@ footer {
 .footer-content ul li a {
     text-decoration: none;
     color: #333;
+}
+
+#main,#application,#conclusion{
+    margin-top: 2rem;
+}
+#main,#application,#conclusion p{
+    margin-top: 1rem;
 }
